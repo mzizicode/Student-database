@@ -2,17 +2,18 @@ server:
   error:
     include-message: always
     include-binding-errors: always
-  port: 8080
+  port: 8081
 spring:
   application:
     name: student
   datasource:
-    url: jdbc:postgresql://localhost:5432/studentdata
-    username: postgres
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/student
+    username: peter
     password: password
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     show-sql: true
     properties:
       hibernate:
